@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consórcios e Investimentos Inteligentes</title>
+    <style>
+        :root {
+            --azul-marinho: #0A192F;
+            --azul-royal: #1E40AF;
+            --azul-celeste: #0EA5E9;
+            --branco: #FFFFFF;
+            --cinza-claro: #F8FAFC;
+            --verde-wpp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--azul-marinho);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--azul-marinho);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--azul-celeste);
+        }
+
+        .logo {
+            color: var(--branco);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--azul-celeste);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-marinho) 60%, var(--azul-royal));
+            color: var(--branco);
+            padding: 100px 5% 120px 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            header-line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--azul-celeste);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            color: #E2E8F0;
+        }
+
+        /* Botão Principal */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--verde-wpp);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 18px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s, background-color: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: #20ba5a;
+        }
+
+        .btn-whatsapp svg {
+            margin-right: 10px;
+            fill: currentColor;
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Diferenciais */
+        .features {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: -60px auto 0 auto;
+            background: var(--branco);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-left: 4px solid var(--azul-royal);
+            background: var(--cinza-claro);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: var(--azul-royal);
+            margin-bottom: 12px;
+        }
+
+        /* Seção Sobre / Chamada */
+        .cta-section {
+            padding: 80px 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--azul-marinho);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--azul-marinho);
+            color: #94A3B8;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #1E293B;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .features { margin-top: 20px; }
+            .cta-section h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Consórcio <span>&amp; Investimentos</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>Planeje seu futuro e conquiste bens sem pagar <span>juros abusivos</span></h1>
+        <p>Acelere a conquista do seu patrimônio com estratégias inteligentes de consórcios e investimentos sob medida para o seu perfil.</p>
+        
+        <!-- COLOQUE SEU LINK DO WHATSAPP NO lugar do '#' abaixo -->
+        <a href="wa.me." target="_blank" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
+            Fale Conosco no WhatsApp
+        </a>
+    </section>
+
+    <main class="features">
+        <div class="feature-card">
+            <h3>Consórcio Imobiliário</h3>
+            <p>Construa, compre ou reforme seu imóvel sem juros de financiamento. Parcelas previsíveis que cabem no seu orçamento.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Consórcio de Veículos</h3>
+            <p>Conquiste seu carro novo ou renove sua frota com segurança financeira e poder de compra à vista.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Alocação de Investimentos</h3>
+            <p>Multiplique seu capital com estratégias personalizadas focadas em proteção e rentabilidade real.</p>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <h2>Pronto para criar seu plano financeiro ideal?</h2>
+        <p style="margin-bottom: 30px;">Pare de perder dinheiro com juros altos. Faça uma simulação gratuita agora mesmo com um de nossos especialistas.</p>
+        
+        <!-- COLOQUE SEU LINK DO WHATSAPP NO lugar do '#' abaixo -->
+        <a href="wa.me." target="_blank" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
+            Quero Fazer uma Simulação Gratuita
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Consórcios e Investimentos. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
