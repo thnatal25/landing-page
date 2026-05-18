@@ -37,15 +37,14 @@
             border-bottom: 2px solid var(--azul-celeste);
         }
 
-        .container-logo {
-            display: flex;
-            align-items: center;
+        .logo-texto {
+            color: var(--branco);
+            font-size: 22px;
+            font-weight: bold;
         }
 
-        .logo-topo {
-            max-height: 50px;
-            width: auto;
-            display: block;
+        .logo-texto span {
+            color: var(--azul-celeste);
         }
 
         /* Menu de Navegação */
@@ -62,19 +61,48 @@
             color: var(--azul-celeste);
         }
 
-        /* Hero Section */
+        /* Hero Section (Principal) */
         .hero {
             background: linear-gradient(135deg, var(--azul-marinho) 60%, var(--azul-royal));
             color: var(--branco);
-            padding: 100px 5% 120px 5%;
-            text-align: center;
-            position: relative;
+            padding: 80px 5% 120px 5%;
+        }
+
+        /* Container que divide a Foto e o Texto lado a lado */
+        .container-hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        /* Lado Esquerdo - Foto de Perfil Grande */
+        .bloco-foto {
+            flex: 1;
+            max-width: 450px; /* Controla a largura máxima da foto */
+            display: flex;
+            justify-content: center;
+        }
+
+        .foto-principal {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        /* Lado Direito - Textos e Botão */
+        .bloco-texto {
+            flex: 1.2;
+            text-align: left; /* Alinha o texto à esquerda combinando com a imagem */
         }
 
         .hero h1 {
-            font-size: 48px;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
+            font-size: 42px;
+            margin-bottom: 20px;
             line-height: 1.2;
         }
 
@@ -83,9 +111,8 @@
         }
 
         .hero p {
-            font-size: 20px;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
+            font-size: 18px;
+            margin-bottom: 40px;
             color: #E2E8F0;
         }
 
@@ -96,8 +123,8 @@
             background-color: var(--verde-wpp);
             color: var(--branco);
             text-decoration: none;
-            padding: 18px 35px;
-            font-size: 20px;
+            padding: 16px 32px;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
@@ -168,8 +195,11 @@
             border-top: 1px solid #1E293B;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
+        /* Responsividade (Celular) */
+        @media (max-width: 900px) {
+            .container-hero { flex-direction: column; text-align: center; gap: 30px; }
+            .bloco-texto { text-align: center; }
+            .bloco-foto { max-width: 320px; }
             .hero h1 { font-size: 32px; }
             .hero p { font-size: 16px; }
             .features { margin-top: 20px; }
@@ -181,11 +211,9 @@
 </head>
 <body>
 
-    <!-- Cabeçalho Corrigido com a Logo à Esquerda -->
+    <!-- Cabeçalho Limpo -->
     <header>
-        <div class="container-logo">
-            <img src="thiago3.png" alt="Decisão Consórcio e Investimento" class="logo-topo">
-        </div>
+        <div class="logo-texto">Decisão <span>&amp; Investimentos</span></div>
         <nav class="menu-navegacao">
             <a href="#inicio">Início</a>
             <a href="#diferenciais">Diferenciais</a>
@@ -193,15 +221,27 @@
         </nav>
     </header>
 
-    <!-- Seção Principal -->
+    <!-- Seção Principal Adaptada -->
     <section class="hero" id="inicio">
-        <h1>Planeje seu futuro e conquiste bens sem pagar <span>juros abusivos</span></h1>
-        <p>Acelere a conquista do seu patrimônio com estratégias inteligentes de consórcios e investimentos sob medida para o seu perfil.</p>
-        
-        <a href="https://wa.me/5565981181210" target="_blank" class="btn-whatsapp">
-            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
-            Fale Conosco no WhatsApp
-        </a>
+        <div class="container-hero">
+            
+            <!-- Foto Posicionada Perfeitamente à Esquerda e Grande -->
+            <div class="bloco-foto">
+                <img src="thiago3.png" alt="Thiago - Decisão Consórcios" class="foto-principal">
+            </div>
+
+            <!-- Textos e Botão Alinhados à Direita da Imagem -->
+            <div class="bloco-texto">
+                <h1>Planeje seu futuro e conquiste bens sem pagar <span>juros abusivos</span></h1>
+                <p>Acelere a conquista do seu patrimônio com estratégias inteligentes de consórcios e investimentos sob medida para o seu perfil.</p>
+                
+                <a href="https://wa.me" target="_blank" class="btn-whatsapp">
+                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
+                    Fale Conosco no WhatsApp
+                </a>
+            </div>
+
+        </div>
     </section>
 
     <!-- Cards de Diferenciais -->
@@ -225,7 +265,7 @@
         <h2>Pronto para criar a estratégia financeira que vai te gerar RENTABILIDADE?</h2>
         <p style="margin-bottom: 30px;">Pare de perder dinheiro com juros altos. Faça uma simulação gratuita agora mesmo com um de nossos especialistas.</p>
         
-        <a href="https://wa.me/5565981181210" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me" target="_blank" class="btn-whatsapp">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
             Fale Conosco no WhatsApp
         </a>
@@ -238,6 +278,3 @@
 
 </body>
 </html>
- 
-     
- 
