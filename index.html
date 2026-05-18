@@ -12,7 +12,6 @@
             --branco: #FFFFFF;
             --cinza-claro: #F8FAFC;
             --verde-wpp: #25D366;
-            --vermelho-destaque: #E11D48;
         }
 
         * {
@@ -148,19 +147,38 @@
             background: var(--branco);
             border-radius: 16px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            padding: 40px 30px;
+            padding: 50px 30px;
             position: relative;
             z-index: 10;
         }
 
+        /* Ajuste do Título dos Produtos para Alta Performance e Harmonia */
         .titulo-produtos {
             text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--vermelho-destaque);
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--azul-marinho);
+            margin-bottom: 45px;
+            letter-spacing: -0.5px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .titulo-produtos span {
+            color: var(--azul-royal);
+        }
+
+        /* Linha decorativa abaixo do título */
+        .titulo-produtos::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--azul-celeste);
+            border-radius: 2px;
         }
 
         .grid-produtos {
@@ -186,7 +204,6 @@
             transform: translateY(-5px);
         }
 
-        /* Cor padronizada para os títulos de todos os produtos */
         .card-produto h3 {
             font-size: 18px;
             color: var(--azul-royal);
@@ -243,7 +260,8 @@
             .bloco-foto { max-width: 320px; }
             .hero h1 { font-size: 32px; }
             .hero p { font-size: 16px; }
-            .secao-produtos { margin-top: 20px; padding: 25px 15px; }
+            .secao-produtos { margin-top: 20px; padding: 35px 15px; }
+            .titulo-produtos { font-size: 24px; }
             .grid-produtos { grid-template-columns: repeat(1, 1fr); }
             .cta-section h2 { font-size: 28px; }
             header { flex-direction: column; gap: 15px; text-align: center; }
@@ -284,9 +302,9 @@
         </div>
     </section>
 
-    <!-- Grade de Produtos Corrigida e Alinhada -->
+    <!-- Grade de Produtos Atualizada com o Novo Estilo de Título -->
     <section class="secao-produtos" id="produtos">
-        <h2 class="titulo-produtos">Qual é o tamanho do seu sonho? Nós te ajudamos a realizar!</h2>
+        <h2 class="titulo-produtos">Qual é o tamanho do seu sonho? Nós te ajudamos a <span>realizar!</span></h2>
         
         <div class="grid-produtos">
             
@@ -304,11 +322,11 @@
                 <img src="carro.png" alt="Veículos" class="imagem-produto">
             </div>
 
-            <!-- 3. Casa Própria (Corrigido para Azul Royal e removido 'Imóvel') -->
+            <!-- 3. Casa Própria -->
             <div class="card-produto">
                 <h3>Casa Própria</h3>
                 <p>Construa, compre ou reforme seu imóvel sem juros de financiamento. Parcelas previsíveis que cabem no seu orçamento.</p>
-                <img src="casa.png" alt="Casa Própria" class="imagem-produto">
+                <img src="imovel.png" alt="Casa Própria" class="imagem-produto">
             </div>
 
             <!-- 4. Caminhão -->
@@ -318,7 +336,7 @@
                 <img src="caminhao.png" alt="Caminhão" class="imagem-produto">
             </div>
 
-            <!-- 5. Náutica (Corrigido para Azul Royal) -->
+            <!-- 5. Náutica -->
             <div class="card-produto">
                 <h3>Náutica</h3>
                 <p>Garanta momentos inesquecíveis navegando com sua família e amigos. Planeje e realize seu sonho pelo consórcio!</p>
