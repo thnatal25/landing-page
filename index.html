@@ -141,7 +141,7 @@
             height: 24px;
         }
 
-        /* Seção de Produtos Completamente Nova */
+        /* Seção de Produtos */
         .secao-produtos {
             max-width: 1300px;
             margin: -60px auto 40px auto;
@@ -163,14 +163,12 @@
             letter-spacing: 0.5px;
         }
 
-        /* Grid que organiza os 6 itens na tela */
         .grid-produtos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
         }
 
-        /* Estilo Individual de Cada Card de Produto */
         .card-produto {
             background: var(--cinza-claro);
             border-top: 4px solid var(--azul-royal);
@@ -188,6 +186,7 @@
             transform: translateY(-5px);
         }
 
+        /* Cor padronizada para os títulos de todos os produtos */
         .card-produto h3 {
             font-size: 18px;
             color: var(--azul-royal);
@@ -202,13 +201,11 @@
             line-height: 1.5;
         }
 
-        /* Estilo para as Imagens Abaixo dos Textos */
         .imagem-produto {
             width: 100%;
             height: 120px;
             object-fit: cover;
             border-radius: 6px;
-            background-color: #E2E8F0; /* Fundo cinza enquanto você não colocar a imagem */
         }
 
         /* Seção Sobre / Chamada */
@@ -235,7 +232,7 @@
             border-top: 1px solid #1E293B;
         }
 
-        /* Responsividade (Telas menores e Celular) */
+        /* Responsividade */
         @media (max-width: 1024px) {
             .grid-produtos { grid-template-columns: repeat(3, 1fr); }
         }
@@ -287,7 +284,7 @@
         </div>
     </section>
 
-    <!-- Nova Grade de Produtos Atualizada conforme imagem -->
+    <!-- Grade de Produtos Corrigida e Alinhada -->
     <section class="secao-produtos" id="produtos">
         <h2 class="titulo-produtos">Qual é o tamanho do seu sonho? Nós te ajudamos a realizar!</h2>
         
@@ -297,47 +294,41 @@
             <div class="card-produto">
                 <h3>Motocicleta</h3>
                 <p>Conquiste a liberdade! Chega de andar de ônibus, pagar aluguel de moto para trabalhar... Planos perfeitos para você!</p>
-                <!-- Altere 'moto.png' para o nome do arquivo da imagem da sua moto -->
-                <img src="moto.jpg" alt="Motocicleta" class="imagem-produto">
+                <img src="moto.png" alt="Motocicleta" class="imagem-produto">
             </div>
 
             <!-- 2. Veículos -->
             <div class="card-produto">
                 <h3>Veículos</h3>
                 <p>Conquiste seu carro novo ou renove sua frota com segurança financeira e poder de compra à vista.</p>
-                <!-- Altere 'carro.png' para o nome do arquivo da imagem do seu carro -->
-                <img src="carro.jpg" alt="Veículos" class="imagem-produto">
+                <img src="carro.png" alt="Veículos" class="imagem-produto">
             </div>
 
-            <!-- 3. Casa Própria/Imóvel -->
-            <div class="card-produto" style="border-top-color: var(--azul-celeste);">
-                <h3 style="color: var(--azul-celeste);">Casa Própria / Imóvel</h3>
+            <!-- 3. Casa Própria (Corrigido para Azul Royal e removido 'Imóvel') -->
+            <div class="card-produto">
+                <h3>Casa Própria</h3>
                 <p>Construa, compre ou reforme seu imóvel sem juros de financiamento. Parcelas previsíveis que cabem no seu orçamento.</p>
-                <!-- Altere 'imovel.png' para o nome do arquivo da imagem da sua casa -->
-                <img src="casa.jpg" alt="Casa Própria" class="imagem-produto">
+                <img src="casa.png" alt="Casa Própria" class="imagem-produto">
             </div>
 
             <!-- 4. Caminhão -->
             <div class="card-produto">
                 <h3>Caminhão</h3>
                 <p>Não espere mais! Turbine sua frota: adquira ou troque seu caminhão através de nossa estratégia e acelere seus lucros nas estradas.</p>
-                <!-- Altere 'caminhao.png' para o nome do arquivo da imagem do seu caminhão -->
-                <img src="caminhao.jpg" alt="Caminhão" class="imagem-produto">
+                <img src="caminhao.png" alt="Caminhão" class="imagem-produto">
             </div>
 
-            <!-- 5. Náutica -->
-            <div class="card-produto" style="border-top-color: var(--azul-celeste);">
-                <h3 style="color: var(--azul-celeste);">Náutica</h3>
+            <!-- 5. Náutica (Corrigido para Azul Royal) -->
+            <div class="card-produto">
+                <h3>Náutica</h3>
                 <p>Garanta momentos inesquecíveis navegando com sua família e amigos. Planeje e realize seu sonho pelo consórcio!</p>
-                <!-- Altere 'barco.png' para o nome do arquivo da imagem do seu barco -->
-                <img src="barco.jpg" alt="Náutica" class="imagem-produto">
+                <img src="barco.png" alt="Náutica" class="imagem-produto">
             </div>
 
             <!-- 6. Alavancagem Financeira -->
             <div class="card-produto">
                 <h3>Alavancagem Financeira</h3>
                 <p>Multiplique seu capital com estratégias personalizadas focadas em proteção e rentabilidade real.</p>
-                <!-- Altere 'investimento.jpg' para o nome do arquivo da imagem de investimentos -->
                 <img src="alavancagem.png" alt="Alavancagem Financeira" class="imagem-produto">
             </div>
 
@@ -351,7 +342,7 @@
         
         <a href="https://wa.me" target="_blank" class="btn-whatsapp">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.362 1.448 5.494 0 9.961-4.466 9.964-9.96.003-2.66-1.033-5.161-2.918-7.05C17.118 1.703 14.61 .66 11.991.66 6.5 0 2.034 4.467 2.031 9.96c-.001 2.091.553 4.12 1.601 5.922l-.1.366-1.123 4.1.419-1.096zm14.945-6.915c-.272-.137-1.611-.795-1.862-.886-.251-.092-.434-.137-.617.137-.182.274-.706.886-.866 1.07-.16.182-.32.205-.592.069-.272-.137-1.147-.423-2.186-1.349-.808-.721-1.353-1.612-1.512-1.886-.16-.274-.017-.422.12-.558.122-.122.272-.32.409-.48.136-.16.182-.274.272-.457.091-.183.046-.343-.023-.48-.069-.137-.617-1.486-.845-2.036-.222-.534-.447-.461-.617-.471-.16-.008-.343-.01-.526-.01-.183 0-.48.069-.731.343-.251.274-.96 1.036-.96 2.529 0 1.493 1.085 2.933 1.233 3.131.149.198 2.136 3.262 5.176 4.571.723.311 1.288.497 1.728.637.727.231 1.388.198 1.91.12.583-.087 1.611-.659 1.839-1.295.228-.637.228-1.187.16-1.295-.069-.108-.251-.183-.523-.32z"/></svg>
-            Fale Comosco no WhatsApp
+            Fale Conosco no WhatsApp
         </a>
     </section>
 
@@ -362,4 +353,3 @@
 
 </body>
 </html>
-
